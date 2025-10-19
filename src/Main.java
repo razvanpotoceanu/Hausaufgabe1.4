@@ -1,13 +1,30 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class Main {
+    public static void main(String[] args) {
+        //aufgabe1
+
+        int[] tastaturen = {40,35, 70, 15, 45, 10};
+        System.out.println("Die billigste Tastatur: "+ BilligsteTastatur.findeBilligsteTastatur(tastaturen));
+
+
+        //aufgabe2
+
+        int[] tastatur = {15, 20, 10, 35};
+        int[] USB = {20,15,40,15};
+        System.out.println("den teuersten Gegenstand:" + TeuerstenGegenstand.findeTeuerstenGegenstand(tastatur, USB));
+
+
+        //aufgabe3
+        int[] Preise = {15,45,20};
+        int Budget = 30;
+        System.out.println("das teuerste USB Laufwerk, das Markus kaufen kann: " + TeuerstesUsbFurBudget.findeTeuerstesUsbFurBudget(Preise, Budget));
+
+        //aufgabe4
+        int budget = 60;
+        int[] tastaturen2 = {40, 60};
+        int[] USB2 = {8,12};
+
+        System.out.println("den maximalen Geldbetrag: " + MaximalenGeldbetrag.findeMaximalenGeldbetrag(budget, tastaturen2, USB2));
+
     }
 }
